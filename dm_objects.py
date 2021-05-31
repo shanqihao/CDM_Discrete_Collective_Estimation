@@ -183,7 +183,7 @@ class DM_object_DMVD:
                         #print('resample ', i, self.decision_array[i])
 
 
-class DM_object_ob_sharing:
+class DM_object_DBBS:
     def __init__(self, hypotheses, l_cache, decay_coeff, decay_coeff_2, N=20):
         self.dm_type = 'os'
         self.tile_array = np.array([])
@@ -235,7 +235,7 @@ class DM_object_ob_sharing:
         self.decision_array[s != self.hypotheses.size] = d[s != self.hypotheses.size]
 
 
-class DM_object_ob_sharing_no_index:
+class DM_object_DBBS_no_index:
     def __init__(self, hypotheses, l_cache, decay_coeff, decay_coeff_2, N=20):
         self.dm_type = 'os'
         self.tile_array = np.array([])
