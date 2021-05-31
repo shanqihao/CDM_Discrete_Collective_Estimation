@@ -159,6 +159,8 @@ class arena:
             self.axis[0, 1].set_ylim([-1, len(self.hypotheses)])
 
             self.axis[0, 0].set_title('timestep '+str(t_step))
+            self.axis[0, 1].set_title('decisions')
+            self.axis[1, 0].set_title('belief 0')
             for i in range(self.width):
                 for j in range(self.length):
                     if self.tile_array[i, j] == 1:
@@ -184,8 +186,8 @@ class arena:
                 self.axis[1, 0].plot(self.dm_object.quality_mat_self[0, :], 'r')
                 self.axis[1, 0].plot(self.dm_object.quality_mat_neigh[0, :], 'b')
                 self.axis[1, 0].plot(dm_objects.normalise(self.dm_object.quality_mat_self[0, :] * self.dm_object.quality_mat_neigh[0, :]), 'm')
-                self.axis[1, 1].plot(self.dm_object.neighbour_tag_record[0, :], 'o')
-                self.axis[1, 1].set(ylim=(0, 20))
+                #self.axis[1, 1].plot(self.dm_object.neighbour_tag_record[0, :], 'o')
+                #self.axis[1, 1].set(ylim=(0, 20))
 
             plt.draw()
             plt.pause(0.001)
