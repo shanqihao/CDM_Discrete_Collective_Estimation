@@ -19,7 +19,7 @@ Max_step = 30000
 
 for i in range(Max_step):
     a.random_walk()
-    if i % 100 == 0:
+    if i % 200 == 0:
         a.dm_object.make_decision(a.robots, a.coo_array)
     a.plot_arena(i)
 
